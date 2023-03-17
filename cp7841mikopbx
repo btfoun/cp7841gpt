@@ -1,1 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Начало конфигурационного файла -->
+<device>
+  
+  <!-- Настройка имени устройства -->
+  <deviceName>CP-7841</deviceName>
 
+  <!-- Настройка протокола устройства -->
+  <deviceProtocol>SIP</deviceProtocol>
+
+  <!-- Настройка пула устройств -->
+  <devicePool>
+    <!-- Настройка настроек времени и даты -->
+    <dateTimeSetting>
+      <dateTemplate>M/D/YA</dateTemplate>
+      <timeZone>Arabian Standard Time</timeZone>
+    </dateTimeSetting>
+
+    <!-- Настройка группы менеджеров звонков -->
+    <callManagerGroup>
+      <members>
+        <member priority="0">
+          <callManager>
+            <ports>
+              <ethernetPhonePort>2000</ethernetPhonePort>
+			  <processNodeName>qqq</processNodeName>
+            </ports>
+          </callManager>
+        </member>
+      </members>
+    </callManagerGroup>
+	
+	<name>MyDevicePool</name>
+  <dateTimeSetting>
+    <dateTemplate>yyyy-mm-dd</dateTemplate>
+    <timeZone>GMT-8</timeZone>
+    <ntps>
+      <ntp>
+        <name>qqq</name>
+        <ntpMode>Unicast</ntpMode>
+      </ntp>
+    </ntps>
+  </dateTimeSetting>
+  <userLocale>
+		<name>Russian_Federation</name>
+		<uid/>
+		<langCode>ru_RU</langCode>
+		<version/>
+		<winCharSet>utf-8</winCharSet>
+	</userLocale>
+	<networkLocale>Russian_Federation</networkLocale>
+	<networkLocaleInfo>
+		<name>Russian_Federation</name>
+	</networkLocaleInfo>
+  <connectionMonitorDuration>120</connectionMonitorDuration>
+  <certHash></certHash>
+<encrConfig>false</encrConfig>
+<sshUserId>admin</sshUserId>
+<sshPassword>Osts14stso</sshPassword>
+<digestUser>guest</digestUser>
+<digestPassword>Osts14stso</digestPassword>
+<deviceSecurityMode>1</deviceSecurityMode>
+<dscpForSCCPPhoneConfig>96</dscpForSCCPPhoneConfig>
+<dscpForSCCPPhoneServices>96</dscpForSCCPPhoneServices>
+<dscpForCm2DvceSgnl>96</dscpForCm2DvceSgnl>
+<dscpForCm2DvceRtp>184</dscpForCm2DvceRtp>
+  </devicePool>
+
+  <!-- Настройка профиля SIP -->
+  <sipProfile>
+ 
+	<sipCallFeatures>
+    <cnfJoinEnabled>true</cnfJoinEnabled>
+    <callForwardURI>x-cisco-serviceuri-cfwdall</callForwardURI>
+    <callPickupURI>x-cisco-serviceuri-pickup</callPickupURI>
+    <callPickupListURI>x-cisco-serviceuri-opickup</callPickupListURI>
+    <callPickupGroupURI>x-cisco-serviceuri-gpickup</callPickupGroupURI>
+    <meetMeServiceURI>x-cisco-serviceuri-meetme</meetMeServiceURI>
+    <abbreviatedDialURI>x-cisco-serviceuri-abbrdial</abbreviatedDialURI>
+</sipCallFeatures>
+<sipStack>
+<sipInviteRetx>6</sipInviteRetx>
+<sipRetx>10</sipRetx>
+<timerInviteExpires>180</timerInviteExpires>
+<timerRegisterExpires>3600</timerRegisterExpires>
+<timerRegisterDelta>5</timerRegisterDelta>
+<timerKeepAliveExpires>120</timerKeepAliveExpires>
+<timerSubscribeExpires>120</timerSubscribeExpires>
+<timerSubscribeDelta>5</timerSubscribeDelta>
+<timerT1>500</timerT1>
+<timerT2>4000</timerT2>
+<maxRedirects>70</maxRedirects>
+<remotePartyID>true</remotePartyID>
+</sipStack>
+<autoAnswerTimer>10</autoAnswerTimer>
+<autoAnswerAltBehavior>false</autoAnswerAltBehavior>
+<autoAnswerOverride>true</autoAnswerOverride>
+<transferOnhookEnabled>true</transferOnhookEnabled>
+<enableVad>false</enableVad>
+<preferredCodec>g711ulaw</preferredCodec>
+<dtmfAvtPayload>101</dtmfAvtPayload>
+<silenceSuppressionThreshold>1450</silenceSuppressionThreshold>
+<dtmfDbLevel>3</dtmfDbLevel>
+<dtmfOutofBand>avt</dtmfOutofBand>
+<alwaysUsePrimeLine>false</alwaysUsePrimeLine>
+<alwaysUsePrimeLineVoiceMessage>false</alwaysUsePrimeLineVoiceMessage>
+<kpml>3</kpml>
+<natEnabled>false</natEnabled>
+<phoneLabel>qqqq</phoneLabel>
+<stutterMsgWaiting>0</stutterMsgWaiting>
+<callStats>true</callStats>
+<silentPeriodBetweenCallWaitingBursts>10</silentPeriodBetweenCallWaitingBursts>
+<disableLocalSpeedDialConfig>false</disableLocalSpeedDialConfig>
+<startMediaPort>16384</startMediaPort>
+<stopMediaPort>32766</stopMediaPort>
+<voipControlPort>5060</voipControlPort>
+<dscpForAudio>184</dscpForAudio>
+<dscpForVideo>136</dscpForVideo>
+<dscpForCm2Dvce>96</dscpForCm2Dvce>
+<ringSettingBusyStationPolicy>Ring</ringSettingBusyStationPolicy>
+<dndCallAlert>Flash</dndCallAlert>
+<dndEnabled>true</dndEnabled>
+<transportLayerProtocol>4</transportLayerProtocol>
+<capfAuthMode>0</capfAuthMode>
+<dialTemplate>dialplan.xml</dialTemplate>	
+    <!-- Настройка SIP-линии -->
+    <sipLines>
+      <line button="1">
+        <featureID>9</featureID>
+        <featureLabel>ВНИПИгаздобыча</featureLabel>
+        <proxy>qqq</proxy>
+        <port>2000</port>
+        <name>Норкин П.В</name>
+        <displayName>Норкин П.В</displayName>
+        <autoAnswer>
+          <autoAnswerEnabled>2</autoAnswerEnabled>
+        </autoAnswer>
+        <callWaiting>2</callWaiting>
+        <authName>4214</authName>
+        <authPassword>qqqqq</authPassword>
+        <sharedLine>false</sharedLine>
+        <messageWaitingLampPolicy>3</messageWaitingLampPolicy>
+        <messagesNumber></messagesNumber>
+        <ringSettingIdle>4</ringSettingIdle>
+        <ringSettingActive>5</ringSettingActive>
+        <contact>Норкин П.В</contact>
+        <forwardBusyExternalPolicy>1</forwardBusyExternalPolicy>
+        <forwardNoAnswerExternalPolicy>1</forwardNoAnswerExternalPolicy>
+        <forwardNoCoverageExternalPolicy>1</forwardNoCoverageExternalPolicy>
+        <forwardUnregisteredExternalPolicy>1</forwardUnregisteredExternalPolicy>
+      </line>
+    </sipLines>
+  </sipProfile>
+
+  <!-- Настройка кнопок телефона -->
+  <phoneButtonTemplate>
+    <name>MyPhoneButtonTemplate</name>
+
+    <!-- Конфигурация первой линии -->
+    <buttons>
+      <button>
+        <name>Line 1</name>
+        <featureID>9</featureID>
+        <featureLabel>info</featureLabel>
+
+      <!-- Настройка номера SIP-линии -->
+      <sip>
+        <address>Норкин П.В</address>
+        <autoAnswer>
+          <autoAnswerEnabled>2</autoAnswerEnabled>
+        </autoAnswer>
+        <callWaiting>2</callWaiting>
+        <authName>Норкин П.В</authName>
+        <authPassword>qqqqq</authPassword>
+        <sharedLine>false</sharedLine>
+        <messageWaitingLampPolicy>3</messageWaitingLampPolicy>
+        <messagesNumber></messagesNumber>
+        <ringSettingIdle>4</ringSettingIdle>
+        <ringSettingActive>5</ringSettingActive>
+        <contact>Норкин П.В</contact>
+        <forwardBusyExternalPolicy>1</forwardBusyExternalPolicy>
+        <forwardNoAnswerExternalPolicy>1</forwardNoAnswerExternalPolicy>
+        <forwardNoCoverageExternalPolicy>1</forwardNoCoverageExternalPolicy>
+        <forwardUnregisteredExternalPolicy>1</forwardUnregisteredExternalPolicy>
+      </sip>
+    </button>
+
+    <!-- Конфигурация второй линии -->
+    <button>
+      <name>Line 2</name>
+      <featureID>10</featureID>
+      <featureLabel>Marketing</featureLabel>
+      <sip>
+        <address>Marketing</address>
+      </sip>
+    </button>
+
+    <!-- Конфигурация третьей линии -->
+    <button>
+      <name>Line 3</name>
+      <featureID>11</featureID>
+      <featureLabel>Support</featureLabel>
+      <sip>
+        <address>Support</address>
+      </sip>
+    </button>
+  </buttons>
+</phoneButtonTemplate>
+
+<!-- Настройка функциональных клавиш -->
+<softkeyTemplates>
+  <softkeyTemplate>
+    <name>MySoftKeyTemplate</name>
+
+    <!-- Конфигурация функциональной клавиши 1 -->
+    <softkey>
+      <name>Redial</name>
+      <operation>Redial</operation>
+      <position>1</position>
+    </softkey>
+
+    <!-- Конфигурация функциональной клавиши 2 -->
+    <softkey>
+      <name>CFwdAll</name>
+      <operation>CallForwardAll</operation>
+      <position>2</position>
+    </softkey>
+
+    <!-- Конфигурация функциональной клавиши 3 -->
+    <softkey>
+      <name>CFwdBusy</name>
+      <operation>CallForwardBusy</operation>
+      <position>3</position>
+    </softkey>
+
+    <!-- Конфигурация функциональной клавиши 4 -->
+    <softkey>
+      <name>CFwdNoAns</name>
+      <operation>CallForwardNoAnswer</operation>
+      <position>4</position>
+    </softkey>
+
+    <!-- Конфигурация функциональной клавиши 5 -->
+    <softkey>
+      <name>CFwdNA</name>
+      <operation>CallForwardNotRegistered</operation>
+      <position>5</position>
+    </softkey>
+
+    <!-- Конфигурация функциональной клавиши 6 -->
+    <softkey>
+      <name>Call Pickup</name>
+      <operation>CallPickup</operation>
+      <position>6</position>
+    </softkey>
+  </softkeyTemplate>
+</softkeyTemplates>
+
+<!-- Настройка звуковых сигналов -->
+<ringList>
+  <name>MyRingList</name>
+
+  <!-- Конфигурация звукового сигнала 1 -->
+  <ring>
+    <name>Chirp 1</name>
+    <displayName>Chirp 1</displayName>
+    <asciiLabel>Chirp_1</asciiLabel>
+    <ringFile>Chirp1.raw</ringFile>
+  </ring>
+
+  <!-- Конфигурация звукового сигнала 2 -->
+  <ring>
+    <name>Chirp 2</name>
+    <displayName>Chirp 2</displayName>
+    <asciiLabel>Chirp_2</asciiLabel>
+    <ringFile>Chirp2.raw</ringFile>
+  </ring>
+</ringList>
+<loadInformation>sip78xx.12-1-1SR1-4</loadInformation>
+</device>
